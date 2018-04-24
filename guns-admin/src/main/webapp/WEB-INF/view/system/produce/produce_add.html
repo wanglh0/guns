@@ -1,0 +1,37 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <input type="hidden" id="id" value="">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                    <#input id="name" name="名称"/>
+                    <#select id="dictid" name="字典id">
+                        <option value="42">天使</option>
+                        <option value="43">分销</option>
+                        <option value="44">总代</option>
+                    </#select>
+
+                </div>
+
+                <div class="col-sm-6">
+                    <!--<#input id="dictid" name="字典id" underline="true"/>-->
+                    <#input id="price" name="价钱" underline="true"/>
+
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="ProduceInfoDlg.addSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="ProduceInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/system/produce/produce_info.js"></script>
+@}
