@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.modular.system.dao.ProduceMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.stylefeng.guns.modular.system.model.Produce">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="dictid" property="dictid" />
+        <result column="dictname" property="dictname" />
+        <result column="price" property="price" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, dictid,dictname,price
+    </sql>
+    <select id="selectLists" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        p.id,
+        p.name,
+        p.dictid,
+        d.name as dictname,
+        p.price
+        from
+        produce p left join sys_dict d
+        on p.dictid=d.id
+        where 1=1
+        <if test="condition !=null and condition !='' ">
+          and p.name like concat('%',#{condition},'%') or d.name like concat('%',#{condition},'%')
+        </if>
+        ORDER by p.dictid
+
+    </select>
+
+</mapper>
