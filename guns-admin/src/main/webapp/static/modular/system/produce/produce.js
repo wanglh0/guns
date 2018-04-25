@@ -16,7 +16,7 @@ Produce.initColumn = function () {
         {field: 'selectItem', radio: true},
             {title: '编号', field: 'id', visible: true, align: 'center', valign: 'middle'},
             {title: '名称', field: 'name', visible: true, align: 'center', valign: 'middle'},
-            {title: '代理id', field: 'dictid', visible: true, align: 'center', valign: 'middle'},
+            // {title: '代理id', field: 'dictid', visible: true, align: 'center', valign: 'middle'},
             {title: '代理级别', field: 'dictname', visible: true, align: 'center', valign: 'middle'},
             {title: '价钱', field: 'price', visible: true, align: 'center', valign: 'middle'}
     ];

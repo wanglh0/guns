@@ -1,0 +1,38 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <input type="hidden" id="id" value="${item.id}">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                    <#input id="name" name="名字" value="${item.name}" underline="true"/>
+                    <#input id="phone" name="联系方式" value="${item.phone}" underline="true"/>
+                    <#input id="msg" name="详情" value="${item.msg}" underline="true"/>
+                </div>
+
+                <div class="col-sm-6">
+                    <#select id="level" name="代理级别" value="${item.level}" underline="true">
+                        <option value="天使">天使</option>
+                        <option value="分销">分销</option>
+                        <option value="总代">总代</option>
+                    </#select>
+                    <#input id="price1" name="成本" value="${item.price1}" underline="true"/>
+                    <#input id="price2" name="应收" value="${item.price2}" underline="true"/>
+                    <#input id="price3" name="实收" value="${item.price3}" underline="true"/>
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="GoodsInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="GoodsInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/system/goods/goods_info.js"></script>
+@}

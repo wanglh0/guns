@@ -46,6 +46,10 @@ public class Crdl extends Model<Crdl> {
      */
     private String dictname;
     /**
+     * 信息
+     */
+    private String message1;
+    /**
      * 成本
      */
     private Float price1;
@@ -119,6 +123,14 @@ public class Crdl extends Model<Crdl> {
         this.dictname = dictname;
     }
 
+    public String getMessage1() {
+        return message1;
+    }
+
+    public void setMessage1(String message1) {
+        this.message1 = message1;
+    }
+
     public Float getPrice1() {
         return price1;
     }
@@ -159,17 +171,18 @@ public class Crdl extends Model<Crdl> {
     @Override
     public String toString() {
         return "Crdl{" +
-        "id=" + id +
-        ", name=" + name +
-        ", nowdate=" + nowdate +
-        ", updatetime=" + updatetime +
-        ", phone=" + phone +
-        ", dictid=" + dictid +
-        ", dictname=" + dictname +
-        ", price1=" + price1 +
-        ", price2=" + price2 +
-        ", price3=" + price3 +
-        ", status=" + status +
-        "}";
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", nowdate=" + nowdate +
+                ", updatetime=" + updatetime +
+                ", phone='" + phone + '\'' +
+                ", dictid=" + dictid +
+                ", dictname='" + dictname + '\'' +
+                ", message1='" + message1 + '\'' +
+                ", price1=" + price1 +
+                ", price2=" + price2 +
+                ", price3=" + price3 +
+                ", status='" + status + '\'' +
+                '}';
     }
 }
