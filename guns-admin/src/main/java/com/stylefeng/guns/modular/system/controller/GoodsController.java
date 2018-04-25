@@ -73,6 +73,7 @@ public class GoodsController extends BaseController {
         ShiroUser user = ShiroKit.getUser();
         Wrapper wrapper=new EntityWrapper();
         wrapper.eq("uid",user.getId());
+        wrapper.orderBy("nowdate");
         return goodsService.selectList(wrapper);
     }
 

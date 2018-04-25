@@ -49,7 +49,7 @@ Goods.openAddGoods = function () {
     var index = layer.open({
         type: 2,
         title: '添加',
-        area: ['800px', '420px'], //宽高
+        area: ['800px', '450px'], //宽高
         fix: false, //不固定
         maxmin: true,
         content: Feng.ctxPath + '/goods/goods_add'
@@ -65,7 +65,7 @@ Goods.openGoodsDetail = function () {
         var index = layer.open({
             type: 2,
             title: '详情',
-            area: ['800px', '420px'], //宽高
+            area: ['800px', '450px'], //宽高
             fix: false, //不固定
             maxmin: true,
             content: Feng.ctxPath + '/goods/goods_update/' + Goods.seItem.id
